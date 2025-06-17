@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}T.T.G Network - Gestion École Listes des etudiants{% endblock %}
+{% block content %}
+  <hr>
+  <h2>Liste des Etudiants</h2>
+  <ul>
+    
+      <table style="width: 100%;">
+        <tr>
+          <th>Etudiants</th>
+          <th>Options et ses details</th>
+          <th>Niveau</th>
+          <th>Date D'inscription</th>
+          <th>Actions</th>
+        </tr>
+        {% for etudiant in etudiants %}
+        <tr>
+          <td>{{ etudiant.user }}</td>
+          <td>{{ etudiant.option }}</td>
+          <td>{{ etudiant.niveau }}</td>
+          <td>{{ etudiant.date_inscription }}</td>
+          <td><a href="#"><button>Details</button></a></td>
+        </tr>
+         {% endfor %}
+      </table>
+   
+  </ul>
+{% endblock %}

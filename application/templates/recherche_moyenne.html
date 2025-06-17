@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}T.T.G Network - Gestion École Rechercher des moyennes{% endblock %}
+{% block content %}
+    <hr>
+    <h1>Recherche de la moyenne d'un étudiant</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Rechercher</button>
+    </form>
+    {% if note is None %}
+        <P>{{user.role}} {{user}}, il n'ya aucune note enregistre pour {{matricule}}</P>
+    {% elif moyenne is not None %}
+        <h2>Résultats pour le matricule {{ matricule }}</h2>
+        <p>Moyenne : {{ moyenne|floatformat:2 }}</p>
+        <p>Mention : {{ mention }}</p>
+    {% endif %}
+{% endblock %}

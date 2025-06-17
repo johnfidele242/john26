@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}T.T.G Network - Gestion École Listes des niveaux{% endblock %}
+{% block content %}
+  <hr>
+  <h2>Liste des Niveaux</h2>
+  <ul>
+    
+      <table style="width: 100%;">
+        <tr>
+          <th>Differnts niveaux</th>
+          <th>Actions</th>
+        </tr>
+        {% for niveau in niveaux %}
+        <tr>
+          <td>{{ niveau.nom }}</td>
+          <td><a href="#"><button>Details</button></a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    
+  </ul>
+{% endblock %}

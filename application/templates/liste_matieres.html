@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}T.T.G Network - Gestion École Listes des matieres{% endblock %}
+{% block content %}
+  <hr>
+  <h2>Liste des Matieres</h2>
+  <ul>
+    
+      <table style="width: 100%;">
+        <tr>
+          <th>Matieres</th>
+          <th>Coefficient</th>
+          <th>Option et ses details</th>
+          <th>Actions</th>
+        </tr>
+        {% for matiere in matieres %}
+        <tr>
+          <td>{{ matiere.nom }}</td>
+          <td>{{ matiere.coefficient }}</td>
+          <td>{{ matiere.option }}</td>
+          <td><a href="#"><button>Details</button></a></td>
+        </tr>
+         {% endfor %}
+      </table>
+   
+  </ul>
+{% endblock %}
