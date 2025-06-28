@@ -219,7 +219,7 @@ def emargement_view(request):
             return redirect('liste_emargements')
     else:
         form = EmargementForm()
-    return render(request, 'emargement.html', {'form': form})
+    return render(request, 'liste_emargements.html', {'form': form})
 
 @login_required
 def liste_emargements_view(request):

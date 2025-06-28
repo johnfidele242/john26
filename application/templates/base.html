@@ -89,6 +89,20 @@
                     <a href="{% url 'index' %}" class="nav-item nav-link active">index</a>
                     <a href="{% url 'preinscription' %}" class="nav-item nav-link">preinscription</a>
                     <a href="{% url 'options' %}" class="nav-item nav-link">options</a>
+                    <a href="{% url 'etudiant' %}" class="nav-item nav-link active">etudiant</a>
+                    <a href="{% url 'enseignement' %}" class="nav-item nav-link">enseignement</a>
+                    <select id="menu" onchange="if (this.value) window.location.href=this.value;" class="nav-item nav-link active">
+                    <option value="" class="nav-item nav-link active">-- Autres pages--</option>
+                    <option value="{% url 'emargement' %}">Emargements</option>
+                    <option value="{% url 'niveau' %}">Niveaux</option>
+                    <option value="{% url 'note' %}">Notes</option>
+                    <option value="{% url 'article' %}">Articles</option>
+                    <option value="{% url 'matiere' %}">Matieres</option>
+                    </select>
+
+
+
+
                     <div class="nav-item dropdown">
                         
                         <div class="dropdown-menu m-0">
